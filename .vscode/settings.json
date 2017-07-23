@@ -1,0 +1,8 @@
+{
+	"files.associations": {
+		"*.m": "matlab",
+		"*.lua.txt": "lua",
+		"luasocket_scripts.c": "c"
+	},
+	"workbench.colorTheme": "Visual Studio Dark"
+}
