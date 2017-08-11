@@ -31,6 +31,17 @@ find_path(XLUA_PROJECT_DIR NAMES SConstruct
 
 MARK_AS_ADVANCED(XLUA_PROJECT_DIR)
 
+#begin sproto
+set (SPROTO_SRC sproto/sproto.c sproto/lsproto.c)
+set_property(
+    SOURCE ${SPROTO_SRC}
+    APPEND
+    PROPERTY COMPILE_DEFINITIONS
+    LUA_LIB_LA
+)
+set (THIRDPART_SRC ${THIRDPART_SRC} ${SPROTO_SRC})
+#end sproto
+
 if (USING_LUAJIT)
 	
     if (APPLE AND NOT IOS)
